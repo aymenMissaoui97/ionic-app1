@@ -1,0 +1,37 @@
+<ion-content>
+  <!-- HEADER -->
+    <div class="header">
+      <ion-buttons>
+        <ion-button routerLink="/tabs/category">
+          <ion-icon slot="icon-only" color="danger" name="arrow-back"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <h1>{{name}}</h1>
+    </div>
+
+  <!-- filterblock -->
+    <div class="filterblock">
+      <div class="select">
+        <ion-item>
+          <ion-select value="peperoni" placeholder="Trier par">
+            <ion-select-option value="Propularité">Propularité</ion-select-option>
+            <ion-select-option value="Nouveautés">Nouveautés</ion-select-option>
+            <ion-select-option value="Notés">Mieux Notés</ion-select-option>
+            <ion-select-option value="bas">Prix le plus bas</ion-select-option>
+            <ion-select-option value="élevé">Prix le plus élevé</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </div>
+      
+      <div class="filter" (click)="showModal()">FILTRES</div>
+    </div>
+
+    <!----PRODUCTS-->
+<div class="description">
+  <h1 class="list-header">{{name}}</h1>
+</div>
+<div class="food-list">
+<app-food-card *ngFor="let food of foods" [item]="food"></app-food-card>
+</div>
+
+</ion-content>

@@ -1,0 +1,70 @@
+<ion-modal [isOpen]='true' [swipeToClose]="true">
+  <ng-template>
+    <ion-content>
+      <div class="header">
+        <div class="dismiss" (click)="dismiss()">Close 
+        </div>
+        
+        <div class="confirm">Confirm</div>
+      </div>
+
+      <div class="rates">
+        <ion-list>
+          <ion-radio-group value="stars">
+            <div class="label">Evaluation Clients</div>
+            <ion-item>
+              <ion-label> <img src="assets/svg/fourstars.svg" alt=""> et plus</ion-label>
+              <ion-radio slot="start" value="fourstar"></ion-radio>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label><img src="assets/svg/threestars.svg" alt="">et plus</ion-label>
+              <ion-radio slot="start" value="threestar"></ion-radio>
+            </ion-item>
+        
+            <ion-item>
+              <ion-label><img src="assets/svg/twostars.svg" alt="">et plus</ion-label>
+              <ion-radio slot="start" value="twostar"></ion-radio>
+            </ion-item>
+          
+            <ion-item>
+              <ion-label><img src="assets/svg/onestar.svg" alt="">et plus</ion-label>
+              <ion-radio slot="start" value="onestar"></ion-radio>
+            </ion-item>
+          </ion-radio-group>
+        </ion-list>
+      </div>
+
+      <div class="price">
+        <div class="title">Prix(TND)</div>
+        <ion-item>
+          <ion-range [(ngModel)]="valRang" min="10" max="500" [pin]="true" [pinFormatter]="customFormatter" snaps="true" step="2" color="tertiary">
+          </ion-range>
+        </ion-item>
+
+        <div class="priceblock">
+          <div class="min">10</div>
+          <hr>
+          <div class="max">{{valRang}}</div>
+        </div>
+      </div>
+
+      <div class="category">
+        <div class="title">CATÉGORIE</div>
+        <div class="list">
+          <div class="title select">
+            Flmaison
+            <div class="soucategory">
+              <p>salé</p>
+              <p>fast food</p>
+              <p>gateaux</p>
+              <p>clothes</p>
+            </div>
+          </div>
+          <div class="title">2éme main</div>
+        </div>
+      </div>
+    </ion-content>
+  </ng-template>
+
+  </ion-modal>

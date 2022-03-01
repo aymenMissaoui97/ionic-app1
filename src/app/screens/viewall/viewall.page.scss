@@ -1,0 +1,86 @@
+ion-content{
+    --padding-start: 2rem;
+    --padding-end: 2rem;
+
+    .header{
+        display:flex;
+        // justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        margin-top: 3rem;   
+
+        ion-buttons{
+            margin-right: 30px;
+        }
+
+        h1{
+            font-size: 3rem;
+            font-weight: 600;
+            color: #515151;
+            margin: 0;
+        }
+    }
+
+    .filterblock{
+        height: 36px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 30px;
+
+        .select{
+            height: 100%;
+            width: 50%;
+            display: flex;
+            align-items: center;
+
+            ion-item{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                ion-select{
+                    height: 0px;
+                    width: 100%;
+                    font-weight: 550;
+                }
+            }
+        }
+
+        .filter{
+            height: 100%;
+            width: 50%;
+            margin-left: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 550;
+        }
+
+        .filter:active{
+            background-color: #51515117;
+        }
+    }
+
+    .description{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        
+        .list-header{
+            font-weight: 700;
+            color: #515151;
+            font-size: 1.8rem;
+            margin-bottom: 1.6rem;
+            margin-top: 2.5rem;
+        }
+    }
+
+    .food-list{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1rem;
+    }
+}

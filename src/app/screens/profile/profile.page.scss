@@ -1,0 +1,90 @@
+ion-content{
+    --background: #292549;
+    position: relative;
+
+    .header{
+        display: flex;
+        justify-content: space-between;
+        padding: 1rem 0.5rem;
+    
+        ion-button{
+            height: 60px;
+            width: 60px;
+    
+            ion-icon{
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .card{
+        height: 75%;
+        width: 100%;
+        background: #fff;
+        position: absolute;
+        bottom: 0;
+        border-radius: 3rem 3rem 0 0;
+        padding: 2rem;
+
+        img{
+            position: absolute;
+            top: -4.5rem;
+            left: 50%;
+            width: 50%;
+            transform: translateX(-50%);
+            border: 14px solid #fff;
+            border-radius: 50%;
+        }
+
+        .card-title{
+            margin-top: 30%;
+            margin-bottom: 1.2rem;
+
+            h1{
+                font-weight: 700;
+                font-size: 1.5rem;
+                display: flex;
+                color: #292549;
+                justify-content: center;
+            }
+
+            p{
+                font-size: 0.8rem;
+                font-weight: 700;
+                color: rgba(0, 0, 0, 0.219);
+                display: flex;
+                justify-content: center;
+            }
+        }
+
+        .about{
+
+            h1{
+                position: relative;
+                margin-top: 2px;
+                font-weight: 550;
+                font-size: 1rem;
+                color: #292549;
+            }
+
+            p{
+                position: relative;
+                border-radius: 5px;
+                height: 40px;
+                box-shadow: 5px 0px 10px #888888;
+                margin-top: 20px;
+                font-weight: 500;
+                font-size: 0.9rem;
+                line-height: 40px;
+                padding-left: 10px;
+                font-size: 0.8rem;
+                font-weight: 500;
+            }
+        }
+
+        app-button{
+            width: 100px;
+        }
+    }
+
+}
